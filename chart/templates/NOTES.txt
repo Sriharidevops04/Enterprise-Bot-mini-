@@ -1,0 +1,7 @@
+{{ .Release.Name }} deployed.
+
+Add this to /etc/hosts to reach it via Ingress:
+  <NODE-IP>  {{ .Values.ingress.host }}
+
+Then:
+  curl http://{{ .Values.ingress.host }}/
